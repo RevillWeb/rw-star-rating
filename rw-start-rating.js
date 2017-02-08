@@ -1,6 +1,3 @@
-/**
- * Created by Leon.Revill on 07/02/2017.
- */
 class RwStarRating extends HTMLElement {
     constructor() {
         super();
@@ -15,7 +12,7 @@ class RwStarRating extends HTMLElement {
         if (this._value === value) return;
         this._value = value;
         if (this._$top !== null) {
-            this._$top.style.width = (value * 10) + "%";
+            this._$top.style.width = ((value * 10) * 2) + "%";
         }
     }
     get value() {
@@ -24,12 +21,18 @@ class RwStarRating extends HTMLElement {
     connectedCallback() {
         this._root.innerHTML = `
             <style>
+                :host {
+                    width: 125px;
+                    height: 35px;
+                    display: inline-block;
+                    contain: content;
+                    overflow: hidden;
+                    user-select: none;
+                }
                 .container {
                   unicode-bidi: bidi-override;
                   color: #c5c5c5;
-                  font-size: 25px;
-                  height: 25px;
-                  width: 125px;
+                  font-size: 25px;                            
                   margin: 0 auto;
                   position: relative;
                   padding: 0;
@@ -57,7 +60,6 @@ class RwStarRating extends HTMLElement {
                 .container .bottom {
                   padding: 0;
                   display: block;
-                  z-index: 0;
                   position: absolute;
                   top: 0;
                   left: 0;
@@ -77,11 +79,17 @@ class RwStarRating extends HTMLElement {
                     <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                 </div>
                 <div class="bottom">
-                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    <span data-value="5">★</span><span data-value="4">★</span><span data-value="3">★</span><span data-value="2">★</span><span data-value="1">★</span>                   
                 </div>
             </div>
         `;
         this._$top = this._root.querySelector(".top");
+        this._$bottom = this._root.querySelector(".bottom");
+        this._$bottom.addEventListener("click", (event) => {
+            if (event.target.dataset.value !== undefined) {
+                this.value = event.target.dataset.value;
+            }
+        })
     }
 
 }
