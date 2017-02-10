@@ -6,14 +6,14 @@ class RwStarRating extends HTMLElement {
         // Elements
         this._$top = null;
         // Data
-        this._value = null;
+        this._value = 0;
+        this._touched = false;
+        this._disabled = false;
     }
     set value(value) {
         if (this._value === value) return;
         this._value = value;
-        if (this._$top !== null) {
-            this._$top.style.width = ((value * 10) * 2) + "%";
-        }
+        this._render();
     }
     get value() {
         return this._value;
@@ -22,23 +22,24 @@ class RwStarRating extends HTMLElement {
         this._root.innerHTML = `
             <style>
                 :host {
-                    width: 125px;
-                    height: 35px;
+                    width: 4.1em;
+                    height: 1em;
                     display: inline-block;
-                    contain: content;
                     overflow: hidden;
                     user-select: none;
+                    vertical-align: middle;
+                    box-sizing: border-box;
                 }
-                .container {
-                  unicode-bidi: bidi-override;
+                .container {                  
                   color: #c5c5c5;
-                  font-size: 25px;                            
+                  font-size: 1em;
+                  line-height: 1em;
                   margin: 0 auto;
                   position: relative;
                   padding: 0;
                   cursor: pointer;
                 }
-                :host([readonly]) .container {
+                :host([disabled]) .container {
                     cursor: inherit;
                 }
                 .container .top {
@@ -54,7 +55,7 @@ class RwStarRating extends HTMLElement {
                 .container:hover .top {
                     display: none;
                 }
-                :host([readonly]) .container .top {
+                :host([disabled]) .container .top {
                     display: block;
                 }               
                 .container .bottom {
@@ -63,14 +64,16 @@ class RwStarRating extends HTMLElement {
                   position: absolute;
                   top: 0;
                   left: 0;
+                  unicode-bidi: bidi-override;
                   direction: rtl;
                 }
+                /* Credit: https://css-tricks.com/star-ratings/ */
                 .container .bottom > span:hover,
                 .container .bottom > span:hover ~ span {               
                    color: #e7bd06;
-                }
-                :host([readonly]) .container .bottom > span:hover,
-                :host([readonly]) .container .bottom > span:hover ~ span {
+                }                
+                :host([disabled]) .container .bottom > span:hover,
+                :host([disabled]) .container .bottom > span:hover ~ span {
                     color: inherit;
                 }
             </style>
@@ -86,10 +89,42 @@ class RwStarRating extends HTMLElement {
         this._$top = this._root.querySelector(".top");
         this._$bottom = this._root.querySelector(".bottom");
         this._$bottom.addEventListener("click", (event) => {
-            if (event.target.dataset.value !== undefined) {
-                this.value = event.target.dataset.value;
+            if (this._disabled !== true && event.target.dataset.value !== undefined) {
+                if (this._value !== event.target.dataset.value) {
+                    this.dispatchEvent(new Event("change"));
+                    this.value = event.target.dataset.value;
+                }
             }
-        })
+        });
+        const initialValue = this.getAttribute("value");
+        if (initialValue !== null) {
+            this._value = initialValue;
+        }
+        this._disabled = (this.getAttribute("disabled") !== null);
+        this._render();
+    }
+    _render() {
+        if (this._$top !== null) {
+            this._$top.style.width = ((this._value * 10) * 2) + "%";
+        }
+    }
+    static get observedAttributes() {
+        return ["value", "disabled"];
+    }
+    attributeChangedCallback(name, oldValue, newValue) {
+        if (oldValue !== newValue) {
+            switch (name) {
+                case "disabled":
+                    this._disabled = (newValue !== null);
+                    break;
+                case "value":
+                    if (this._touched === false) {
+                        this._value = newValue;
+                        this._render();
+                    }
+                    break;
+            }
+        }
     }
 
 }
