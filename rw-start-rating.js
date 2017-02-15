@@ -5,13 +5,15 @@ class RwStarRating extends HTMLElement {
         this._root = this.attachShadow({ mode: "open" });
         // Elements
         this._$top = null;
+        this._$bottom = null;
         // Data
+        this._disabled = false;
         this._value = 0;
         this._touched = false;
-        this._disabled = false;
     }
     set value(value) {
         if (this._value === value) return;
+        this._touched = true;
         this._value = value;
         this._render();
     }
@@ -29,7 +31,7 @@ class RwStarRating extends HTMLElement {
                     user-select: none;
                     vertical-align: middle;
                     box-sizing: border-box;
-                }
+                }          
                 .container {                  
                   color: #c5c5c5;
                   font-size: 1em;
@@ -38,10 +40,7 @@ class RwStarRating extends HTMLElement {
                   position: relative;
                   padding: 0;
                   cursor: pointer;
-                }
-                :host([disabled]) .container {
-                    cursor: inherit;
-                }
+                }               
                 .container .top {
                   color: #e7bd06;
                   padding: 0;
@@ -50,14 +49,12 @@ class RwStarRating extends HTMLElement {
                   display: block;
                   top: 0;
                   left: 0;
-                  overflow: hidden;                 
+                  overflow: hidden;
+                  width: 0;       
                 }
                 .container:hover .top {
                     display: none;
-                }
-                :host([disabled]) .container .top {
-                    display: block;
-                }               
+                }                             
                 .container .bottom {
                   padding: 0;
                   display: block;
@@ -71,7 +68,13 @@ class RwStarRating extends HTMLElement {
                 .container .bottom > span:hover,
                 .container .bottom > span:hover ~ span {               
                    color: #e7bd06;
-                }                
+                }               
+                :host([disabled]) .container {
+                    cursor: inherit;
+                }
+                :host([disabled]) .container .top {
+                    display: block;
+                }
                 :host([disabled]) .container .bottom > span:hover,
                 :host([disabled]) .container .bottom > span:hover ~ span {
                     color: inherit;
@@ -86,6 +89,7 @@ class RwStarRating extends HTMLElement {
                 </div>
             </div>
         `;
+        this._disabled = (this.getAttribute("disabled") !== null);
         this._$top = this._root.querySelector(".top");
         this._$bottom = this._root.querySelector(".bottom");
         this._$bottom.addEventListener("click", (event) => {
@@ -99,9 +103,8 @@ class RwStarRating extends HTMLElement {
         const initialValue = this.getAttribute("value");
         if (initialValue !== null) {
             this._value = initialValue;
+            this._render();
         }
-        this._disabled = (this.getAttribute("disabled") !== null);
-        this._render();
     }
     _render() {
         if (this._$top !== null) {
@@ -109,7 +112,7 @@ class RwStarRating extends HTMLElement {
         }
     }
     static get observedAttributes() {
-        return ["value", "disabled"];
+        return ["disabled", "value"];
     }
     attributeChangedCallback(name, oldValue, newValue) {
         if (oldValue !== newValue) {
@@ -126,6 +129,6 @@ class RwStarRating extends HTMLElement {
             }
         }
     }
-
 }
+
 window.customElements.define("rw-star-rating", RwStarRating);
