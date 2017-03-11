@@ -24,25 +24,26 @@ class RwStarRating extends HTMLElement {
         this._root.innerHTML = `
             <style>
                 :host {
-                    width: 4.1em;
+                    width: 4.2em;
                     height: 1em;
                     display: inline-block;
                     overflow: hidden;
                     user-select: none;
                     vertical-align: middle;
                     box-sizing: border-box;
-                }          
+                }       
+                
                 .container {                  
-                  color: #c5c5c5;
+                  color: var(--star-default-color, #c5c5c5);
                   font-size: 1em;
                   line-height: 1em;
                   margin: 0 auto;
                   position: relative;
                   padding: 0;
                   cursor: pointer;
-                }               
+                }     
                 .container .top {
-                  color: #e7bd06;
+                  color: var(--star-selected-color, #e7bd06);
                   padding: 0;
                   position: absolute;
                   z-index: 1;
@@ -67,7 +68,7 @@ class RwStarRating extends HTMLElement {
                 /* Credit: https://css-tricks.com/star-ratings/ */
                 .container .bottom > span:hover,
                 .container .bottom > span:hover ~ span {               
-                   color: #e7bd06;
+                   color: var(--star-hover-color, #e7bd06);
                 }               
                 :host([disabled]) .container {
                     cursor: inherit;
