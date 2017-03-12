@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>A Practical Guide to Vanilla Web Components</title>
+    <script src="polyfills/custom-style-interface.min.js"></script>
     <script src="polyfills/native-shim.js"></script>
     <script src="polyfills/webcomponents-lite.js"></script>
-    <script src="dist/rw-star-rating.js"></script>
-    <style>
+    <script src="rw-star-rating.js"></script>
+    <style class="document-style">
         html, body {
             font-size: 1.5em;
+        }
+        rw-star-rating {
+            --star-default-color: red;
+            --star-selected-color: gold;
+
         }
     </style>
 </head>
 <body>
     <rw-star-rating></rw-star-rating>
+    <script>
+        if (ShadyCSS) {
+            ShadyCSS.CustomStyleInterface.addCustomStyle(document.querySelector('style.document-style'));
+        }
+    </script>
 </body>
 </html>
