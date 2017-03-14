@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e04c394-5299-4e8d-a0cd-2149777b8ffd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/polyfills/custom-style-interface.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="rw-star-rating.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,8 +28,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+            <state relative-caret-position="308">
+              <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -40,8 +38,8 @@
       <file leaf-file-name="rw-star-rating.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rw-star-rating.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="93" column="23" lean-forward="true" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
+            <state relative-caret-position="2046">
+              <caret line="93" column="23" lean-forward="false" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
               <folding>
                 <marker date="1489229526756" expanded="true" signature="451:2619" ph="..." />
                 <marker date="1489229526756" expanded="true" signature="475:769" ph="{...}" />
@@ -64,7 +62,7 @@
       <file leaf-file-name="webcomponents-lite.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/polyfills/webcomponents-lite.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
+            <state relative-caret-position="4070">
               <caret line="185" column="240" lean-forward="false" selection-start-line="185" selection-start-column="240" selection-end-line="185" selection-end-column="240" />
               <folding />
             </state>
@@ -138,7 +136,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -167,6 +164,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -179,7 +177,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../webcomponents.today" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -269,12 +267,15 @@
       <workItem from="1487962652821" duration="172000" />
       <workItem from="1488828829716" duration="1295000" />
       <workItem from="1488908859369" duration="3226000" />
-      <workItem from="1489178471445" duration="9165000" />
+      <workItem from="1489178471445" duration="9208000" />
+      <workItem from="1489339545799" duration="13000" />
+      <workItem from="1489427924874" duration="7000" />
+      <workItem from="1489512963123" duration="6000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32705000" />
+    <option name="totallyTimeSpent" value="32774000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -294,7 +295,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960254" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38556066" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38516992" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -344,6 +345,120 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rw-star-rating.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2046">
+          <caret line="93" column="23" lean-forward="false" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
+          <folding>
+            <marker date="1489229526756" expanded="true" signature="451:2619" ph="..." />
+            <marker date="1489229526756" expanded="true" signature="475:769" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="821:1126" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="1164:1501" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="1540:1594" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="1659:1914" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="2086:2180" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="2241:2297" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="2348:2403" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="2544:2599" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="2655:3067" ph="..." />
+            <marker date="1489229526756" expanded="true" signature="2689:2803" ph="..." />
+            <marker date="1489229526756" expanded="true" signature="2840:3048" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polyfills/webcomponents-lite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4070">
+          <caret line="185" column="240" lean-forward="false" selection-start-line="185" selection-start-column="240" selection-end-line="185" selection-end-column="240" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rw-star-rating.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2046">
+          <caret line="93" column="23" lean-forward="false" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
+          <folding>
+            <marker date="1489229526756" expanded="true" signature="451:2619" ph="..." />
+            <marker date="1489229526756" expanded="true" signature="475:769" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="821:1126" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="1164:1501" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="1540:1594" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="1659:1914" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="2086:2180" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="2241:2297" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="2348:2403" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="2544:2599" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="2655:3067" ph="..." />
+            <marker date="1489229526756" expanded="true" signature="2689:2803" ph="..." />
+            <marker date="1489229526756" expanded="true" signature="2840:3048" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polyfills/webcomponents-lite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4070">
+          <caret line="185" column="240" lean-forward="false" selection-start-line="185" selection-start-column="240" selection-end-line="185" selection-end-column="240" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rw-star-rating.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2046">
+          <caret line="93" column="23" lean-forward="true" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
+          <folding>
+            <marker date="1489229526756" expanded="true" signature="451:2619" ph="..." />
+            <marker date="1489229526756" expanded="true" signature="475:769" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="821:1126" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="1164:1501" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="1540:1594" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="1659:1914" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="2086:2180" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="2241:2297" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="2348:2403" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="2544:2599" ph="{...}" />
+            <marker date="1489229526756" expanded="true" signature="2655:3067" ph="..." />
+            <marker date="1489229526756" expanded="true" signature="2689:2803" ph="..." />
+            <marker date="1489229526756" expanded="true" signature="2840:3048" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polyfills/webcomponents-lite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4070">
+          <caret line="185" column="240" lean-forward="false" selection-start-line="185" selection-start-column="240" selection-end-line="185" selection-end-column="240" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -609,7 +724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -617,7 +731,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -625,7 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -637,14 +749,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/polyfills/webcomponents-es5-loader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="38" column="64" lean-forward="false" selection-start-line="38" selection-start-column="64" selection-end-line="38" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/polyfills/webcomponents-es5-loader.js" />
     <entry file="file://$PROJECT_DIR$/polyfills/custom-style-interface.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -655,7 +760,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/polyfills/webcomponents-lite.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
+        <state relative-caret-position="4070">
           <caret line="185" column="240" lean-forward="false" selection-start-line="185" selection-start-column="240" selection-end-line="185" selection-end-column="240" />
           <folding />
         </state>
@@ -663,8 +768,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rw-star-rating.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="93" column="23" lean-forward="true" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
+        <state relative-caret-position="2046">
+          <caret line="93" column="23" lean-forward="false" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
           <folding>
             <marker date="1489229526756" expanded="true" signature="451:2619" ph="..." />
             <marker date="1489229526756" expanded="true" signature="475:769" ph="{...}" />
@@ -685,8 +790,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        <state relative-caret-position="308">
+          <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
           <folding />
         </state>
       </provider>
