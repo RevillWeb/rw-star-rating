@@ -11,8 +11,18 @@ class RwStarRating extends HTMLElement {
         this._value = 0;
         this._touched = false;
 
-        let $template = document.createElement("template");
-        $template.innerHTML = `
+    }
+    set value(value) {
+        if (this._value === value) return;
+        this._touched = true;
+        this._value = value;
+        this._render();
+    }
+    get value() {
+        return this._value;
+    }
+    connectedCallback() {
+        this._root.innerHTML = `
             <style>
                 :host {
                     width: 4.2em;
@@ -81,24 +91,6 @@ class RwStarRating extends HTMLElement {
                 </div>
             </div>
         `;
-
-        // If the ShadyCSS polyfill is present then prepare the template (auto no-ops)
-        if (ShadyCSS) ShadyCSS.prepareTemplate($template, "rw-star-rating");
-        this._$template = document.importNode($template.content, true);
-
-    }
-    set value(value) {
-        if (this._value === value) return;
-        this._touched = true;
-        this._value = value;
-        this._render();
-    }
-    get value() {
-        return this._value;
-    }
-    connectedCallback() {
-        if (ShadyCSS) ShadyCSS.styleElement(this);
-        this._root.appendChild(this._$template);
         this._disabled = (this.getAttribute("disabled") !== null);
         this._$top = this._root.querySelector(".top");
         this._$bottom = this._root.querySelector(".bottom");
