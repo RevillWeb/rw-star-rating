@@ -10,7 +10,6 @@ class RwStarRating extends HTMLElement {
         this._disabled = false;
         this._value = 0;
         this._touched = false;
-
     }
     set value(value) {
         if (this._value === value) return;
