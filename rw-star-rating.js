@@ -10,18 +10,9 @@ class RwStarRating extends HTMLElement {
         this._disabled = false;
         this._value = 0;
         this._touched = false;
-    }
-    set value(value) {
-        if (this._value === value) return;
-        this._touched = true;
-        this._value = value;
-        this._render();
-    }
-    get value() {
-        return this._value;
-    }
-    connectedCallback() {
-        this._root.innerHTML = `
+
+        let $template = document.createElement("template");
+        $template.innerHTML = `
             <style>
                 :host {
                     width: 4.2em;
@@ -90,6 +81,22 @@ class RwStarRating extends HTMLElement {
                 </div>
             </div>
         `;
+
+        if (window.ShadyCSS) ShadyCSS.prepareTemplate($template, "rw-star-rating");
+        this._$template = document.importNode($template.content, true);
+    }
+    set value(value) {
+        if (this._value === value) return;
+        this._touched = true;
+        this._value = value;
+        this._render();
+    }
+    get value() {
+        return this._value;
+    }
+    connectedCallback() {
+        if (window.ShadyCSS) ShadyCSS.styleElement(this);
+        this._root.appendChild(this._$template);
         this._disabled = (this.getAttribute("disabled") !== null);
         this._$top = this._root.querySelector(".top");
         this._$bottom = this._root.querySelector(".bottom");
